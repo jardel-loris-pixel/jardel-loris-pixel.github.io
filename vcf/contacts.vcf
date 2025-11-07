@@ -1,0 +1,16 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Loris Jardel
+N:Jardel;Loris;;;
+item1.EMAIL;TYPE=INTERNET:jardel.loris1@gmail.com
+item1.X-ABLabel:
+item2.TEL:07 82 95 10 78
+item2.X-ABLabel:
+TITLE:Recherche Alternance
+item3.URL:https\://portfolio-loris-jardel.my.canva.site/
+item3.URL:https://www.linkedin.com/in/loris-jardel-b21792209/
+item3.X-ABLabel:_$!<HomePage>!$_
+PHOTO:https://lh3.googleusercontent.com/contacts/AG6tpzEC63qEOrdzbRIrps53Yk
+ hdqQpJqrVbPSr46JwreaDKgKSxgdUt
+CATEGORIES:myContacts
+END:VCARD

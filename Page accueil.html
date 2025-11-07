@@ -1,0 +1,237 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loris Jardel - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1 class="animate__animated animate__jackInTheBox">Loris JARDEL</h1>
+      <p class="animate__animated animate__fadeInUp animate__delay-2s">Étudiant en Licence Pro Métiers de l'Entrepreneuriat</p>
+      <p class="subtitle animate__animated animate__fadeInUp animate__delay-2s">Comptabilité • Gestion • Management</p>
+    </div>
+    <div class="scroll-arrow" onclick="document.querySelector('.infos-section').scrollIntoView({behavior: 'smooth'})">
+      ↓
+    </div>
+    <img src="images/portrait.png" alt="Photo portrait" class="animate__animated animate__fadeInUp animate__delay-2s">
+  </section>
+
+  <!-- Section Infos -->
+  <section class="infos-section">
+    <div class="infos-container">
+      <h2 class="infos-title animate__animated animate__fadeInDown">Mes Coordonnées</h2>
+      <div class="infos-grid">
+        <!-- Carte Email -->
+        <div class="info-card" data-card="email">
+          <div class="info-card-front">
+            <img src="https://img.icons8.com/?size=100&id=ihMzI7k32pJf&format=png&color=000000" alt="Email">
+            <div class="info-card-title">Email</div>
+          </div>
+          <div class="info-card-back">
+            <p class="info-text">jardel.loris1@gmail.com</p>
+            <a class="info-text" href="mailto:jardel.loris1@gmail.com">Me contacter</a>
+
+            <p class="tap-hint"></p>
+          </div>
+        </div>
+
+        <!-- Carte Téléphone -->
+        <div class="info-card" data-card="phone">
+          <div class="info-card-front">
+            <img src="https://img.icons8.com/?size=100&id=123738&format=png&color=000000" alt="Téléphone">
+            <div class="info-card-title">Téléphone</div>
+          </div>
+          <div class="info-card-back">
+
+            <p class="info-text">07 82 95 10 78</p>
+            <a class="info-text" href="tel:0782951078" onclick="event.stopPropagation()">Appeler maintenant</a>
+            <p class="tap-hint"></p>
+          </div>
+        </div>
+
+        <!-- Carte Adresse -->
+        <div class="info-card" data-card="address">
+          <div class="info-card-front">
+            <img src="https://img.icons8.com/?size=100&id=52553&format=png&color=000000" alt="Adresse">
+            <div class="info-card-title">Adresse</div>
+          </div>
+          <div class="info-card-back">
+            
+            <p class="info-text">4 Rue Fontenille - Apt. 303<br>42300 Roanne</p>
+            <p class="tap-hint"></p>
+          </div>
+        </div>
+
+        <!-- Carte Portfolio -->
+        <div class="info-card" data-card="portfolio">
+          <div class="info-card-front">
+            <img src="https://img.icons8.com/?size=100&id=tZuAOUGm9AuS&format=png&color=000000" alt="Portfolio">
+            <div class="info-card-title">Portfolio</div>
+          </div>
+          <div class="info-card-back">
+          
+           
+            <a class="info-text" href="https://portfolio-loris-jardel.my.canva.site/" target="_blank" onclick="event.stopPropagation()">Voir mon portfolio</a>
+            <p class="tap-hint"></p>
+          </div>
+        </div>
+
+        <!-- Carte LinkedIn -->
+        <div class="info-card" data-card="linkedin">
+          <div class="info-card-front">
+            <img src="https://img.icons8.com/?size=100&id=44019&format=png&color=000000" alt="LinkedIn">
+            <div class="info-card-title">LinkedIn</div>
+          </div>
+          <div class="info-card-back">
+          
+            <a class="info-text" href="https://www.linkedin.com/in/loris-jardel-b21792209/" target="_blank" onclick="event.stopPropagation()">Voir mon profil</a>
+            <p class="tap-hint"></p>
+          </div>
+        </div>
+
+        <!-- Carte Instagram -->
+        <div class="info-card" data-card="instagram">
+          <div class="info-card-front">
+            <img src="https://img.icons8.com/?size=100&id=43625&format=png&color=000000" alt="Instagram">
+            <div class="info-card-title">Instagram</div>
+          </div>
+          <div class="info-card-back">
+          
+            <p class="info-text">@loris_jl_175</p>
+            <a class="info-text" href="https://www.instagram.com/loris_jl_175/" target="_blank" onclick="event.stopPropagation()">Me suivre</a>
+            <p class="tap-hint"></p>
+          </div>
+        </div>
+
+
+        <div  class="info-card" data-card="vcf">
+          <div class="info-card-front">
+            <img src="https://img.icons8.com/?size=100&id=43599&format=png&color=000000" alt="Instagram">
+            <div class="info-card-title">Sauvegarder mon contact</div>
+          </div>
+          <div class="info-card-back">
+            <a class="info-text" href="vcf/contacts.vcf"> Télécharger</a>
+            <p class="tap-hint"></p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- Section À propos -->
+  <section class="about-section">
+    <div class="about-content">
+      <h2 class="animate__animated animate__fadeInDown">À propos</h2>
+      <p class="animate__animated animate__fadeInLeft animate__delay-1s">
+        Je suis à la recherche d'une <span class="highlight">alternance en Licence Pro Métiers de l'Entrepreneuriat</span> au CNAM de Roanne, 
+        après l'obtention d'un <span class="highlight">BTS Comptabilité et Gestion</span>.
+      </p>
+      <p class="animate__animated animate__fadeInRight animate__delay-2s">
+        A présent, je souhaite mettre ma 
+        <span class="highlight">rigueur et mon sens de l'organisation</span> au service de votre entreprise.
+      </p>
+      <p style="margin-top: 2rem; font-size: 1rem; opacity: 0.7;">
+        📍 Roanne • 🚗 Permis B - Véhiculé • 📅 3 jours/semaine en entreprise
+      </p>
+    </div>
+  </section>
+
+  <!-- Section Principale -->
+  <section class="main-section">
+    <div class="sticky-container">
+      <div class="cards-grid">
+        <div class="card">
+          <span class="card-icon"></span>
+          <h3>Formation</h3>
+          <ul>
+            <li>
+              <strong>Licence Pro Métiers de l'Entrepreneuriat</strong>
+              <span class="date">CNAM Roanne • Sept 2025 - Aujourd'hui</span>
+            </li>
+            <li>
+              <strong>BTS Comptabilité et Gestion</strong>
+              <span class="date">Lycée Pasteur Mont-Roland • 2022-2024</span>
+            </li>
+            <li>
+              <strong>Bac Général Maths - Sciences de l'Ingénieur</strong>
+              <span class="date">Lycée Duhamel, Dole • 2018-2021</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="card-icon"></span>
+          <h3>Expérience</h3>
+          <ul>
+            <li>
+              <strong>Comptable - SAS AGS, Tavaux</strong>
+              <span class="date">Décembre 2023</span>
+              Comptabilité générale, TVA, accueil clients
+            </li>
+            <li>
+              <strong>Comptable - SARL EJE, Dole</strong>
+              <span class="date">Mai - Juin 2023</span>
+              Comptabilité, RH, gestion commandes
+            </li>
+            <li>
+              <strong>Missions diverses en intérim</strong>
+              <span class="date">Oct 2021 - Août 2025</span>
+              Préparateur de commandes, manutention
+            </li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="card-icon"></span>
+          <h3>Compétences</h3>
+          <ul>
+            <li>✓ Saisie et tenue comptable</li>
+            <li>✓ Gestion administrative et financière</li>
+            <li>✓ Déclarations TVA et fiscales</li>
+            <li>✓ Maîtrise du français</li>
+            <li>✓ Travail d'équipe et rigueur</li>
+            <li>✓ Anglais B2</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <span class="card-icon"></span>
+          <h3>Distinctions & Engagement</h3>
+          <ul>
+            <li>
+              <strong>🏆 Lauréat Dictée Francophone</strong>
+              1er région Franche-Comté • 2016
+            </li>
+            <li>
+              <strong>🤝 Bénévole Euge'ni, Dole</strong>
+              Événementiel, accueil visiteurs
+            </li>
+            <li>
+              <strong>🩸 Don du sang</strong>
+              Établissement Français du Sang
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+
+  <section class="credits">
+    <p class="subtitle animate__animated animate__fadeInUp animate__delay-2s"> Icones par 
+      <a  href="https://icons8.com/">icons8.com</a>
+    </p>
+  </section>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
