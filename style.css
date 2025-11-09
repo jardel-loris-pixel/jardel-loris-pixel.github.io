@@ -339,15 +339,15 @@ body {
   position: relative;
   background: var(--dark);
   padding: 3rem 0;
-  min-height: 300vh;
+  min-height: 100vh;
 }
 
 .sticky-container {
   position: sticky;
   top: 0;
-  height: 50vh;
+  height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: end;
   justify-content: center;
   perspective: 2000px;
 }
@@ -355,32 +355,35 @@ body {
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  gap: 2rem;
   padding: 2rem;
   max-width: 1200px;
   width: 100%;
 }
 
+/* cartes avant d'apparaitre */
 .card {
   background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
   backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 5px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
   padding: 2.5rem;
   transform-style: preserve-3d;
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-  opacity: 1;
-  transform: translateY(100px) rotateX(-15deg) scale(0.9);
+  opacity: 0;
+  transform: translateY(20px) rotateX(-15deg) scale(1);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
+/*  arrivée dans partie main section */
 .card.show {
   opacity: 1;
-  transform: translateY(0) rotateX(0) scale(1);
+  transform: translateY(10) rotateX(0) scale(1);
 }
 
+/* on passe dessus */
 .card:hover {
-  transform: translateY(-10px) scale(1.02);
+  transform: translateY(-20px) scale(1.05);
   box-shadow: 0 30px 80px rgba(99, 102, 241, 0.4);
   border-color: rgba(99, 102, 241, 0.5);
 }
@@ -400,8 +403,8 @@ body {
 }
 
 .card:nth-child(2) .card-icon { animation-delay: 0.5s; }
-.card:nth-child(3) .card-icon { animation-delay: 1s; }
-.card:nth-child(4) .card-icon { animation-delay: 1.5s; }
+.card:nth-child(3) .card-icon { animation-delay: 2s; }
+.card:nth-child(4) .card-icon { animation-delay: 3s; }
 
 .card h3 {
   font-size: 1.8rem;
