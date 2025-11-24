@@ -102,8 +102,27 @@ body {
   z-index: 5;
 }
 
+/* Canvas backgrounds pour chaque section */
+.animated-section {
+  position: relative;
+  overflow: hidden;
+}
 
-    /* ----------------------------------------------------- infos-section    Mes coordonnées ----------------------------------------------------------------*/
+.animated-section canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.animated-section > *:not(canvas) {
+  position: relative;
+  z-index: 1;
+}
+
+  /* ----------------------------------------------------- infos-section    Mes coordonnées ----------------------------------------------------------------*/
     
 .infos-section {
   min-height: 100vh;
@@ -337,7 +356,7 @@ body {
 
 .main-section {
   position: relative;
-  background: var(--dark);
+  background: var(back);
   padding: 3rem 0;
   min-height: 100vh;
 }

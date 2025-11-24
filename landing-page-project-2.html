@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Calistoga&display=swap" rel="stylesheet">
+
+    <title>Projet - Votre solution de networking digitale</title>
+
+    <style>
+      @font-face {
+        font-display: block;
+        font-family: Roboto;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/7529907e9eaf8ebb5220c5f9850e3811.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/normal/normal/25c678feafdc175a70922a116c9be3e7.woff) format("woff")
+      }
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 600;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/6e9caeeafb1f3491be3e32744bc30440.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/medium/normal/71501f0d8d5aa95960f6475d5487d4c2.woff) format("woff")
+      }
+      @font-face {
+        font-display: fallback;
+        font-family: Roboto;
+        font-weight: 700;
+        src: url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/3ef7cf158f310cf752d5ad08cd0e7e60.woff2) format("woff2"), url(https://assets.brevo.com/font/Roboto/Latin/bold/normal/ece3a1d82f18b60bcce0211725c476aa.woff) format("woff")
+      }
+      #sib-container input:-ms-input-placeholder {
+        text-align: left;
+        font-family: Georgia, serif;
+        color: #c0ccda;
+      }
+      #sib-container input::placeholder {
+        text-align: left;
+        font-family: Georgia, serif;
+        color: #c0ccda;
+      }
+      #sib-container textarea::placeholder {
+        text-align: left;
+        font-family: Georgia, serif;
+        color: #c0ccda;
+      }
+      #sib-container a {
+        text-decoration: underline;
+        color: #2BB2FC;
+      }
+    </style>
+    <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            background-image: url("computer-background.png");
+            background-size: cover;
+            min-height: 100vh;
+            padding: 10px 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(88, 28, 135, 0.4) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            text-align: left;
+            padding: 60px 0;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            letter-spacing: 2px;
+            margin-bottom: 10px;
+            opacity: 0.9;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            font-family: 'Tahoma', sans-serif;
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+        
+        /* Garder le style H2 générique pour les autres sections si besoin */
+        h2 {
+            font-family: 'Ubuntu', sans-serif;
+            font-size: 60px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .description {
+            font-size: 20px;
+            line-height: 1.6;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            max-width: 600px;
+        }
+
+        .hero img{
+          position: relative;
+          left: 20%  ;
+        }
+
+        .cta-section {
+            background: rgba(18, 0, 13, 0.05);
+            backdrop-filter: blur(10px);
+            padding: 20px;
+            border-radius: 20px;
+            max-width: 600px;
+        }
+
+        .cta-text {
+            font-size: 16px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .email-form {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .email-input {
+            flex: 1;
+            min-width: 200px;
+            padding: 15px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            background: #fff;
+        }
+
+        .submit-btn {
+            padding: 15px 40px;
+            background: #891069;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background: #7c3aed;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(139, 92, 246, 0.3);
+        }
+
+        .features {
+            background: #0a0118;
+            padding: 80px 10px 10px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 60px;
+            gap: 30px;
+        }
+
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background: #8b5cf6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .feature-icon::after {
+            content: '✓';
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .feature-content h2 {
+            font-family: 'Calistoga', sans-serif;
+            font-size: 32px;
+            margin-bottom: 15px;
+            line-height: 1.2;
+            margin-left: 3.5rem;
+        }
+
+        .feature-content p {
+            font-size: 20px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-left: 3.5rem;
+        }
+
+        .feature img {
+          padding-top: 1vh;
+          width: 10vw;
+          position: absolute;
+          border-left: 0rem;
+        }
+
+        .final-cta {
+            background: linear-gradient(160deg, #060013 0%, #0052a4 100%);
+            padding: 40px 20px;
+            text-align: center;
+            /* Centrage pour le formulaire Brevo */
+            display: flex;
+            flex-direction: column;
+            align-items: center; 
+        }
+
+        .final-cta h2 {
+            font-family: 'Calistoga', serif;
+            font-size: 36px;
+            margin-bottom: 20px;
+        }
+
+        .footer-link {
+            margin-top: 30px;
+        }
+
+        .footer-link a {
+            color: #8b5cf6;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        .footer-link p {
+            font-size: 20px;
+        }
+
+        .footer-link a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            .hero{background-image: url("phone-background1.png");}
+
+            .description {
+                font-size: 20px;
+            }
+
+            .feature {
+                flex-direction: column;
+            }
+
+            .feature-content h2 {
+                font-size: 32px;
+            }
+
+            .email-form {
+                flex-direction: column;
+            }
+
+            .email-input, .submit-btn {
+                width: 100%;
+            }
+        }
+
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #8b5cf6;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+  
+  <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <p class="subtitle">Le futur du networking professionnel</p>
+                <h1>Projet: Votre solution<br>de networking digitale.</h1>
+                <p class="description">
+                    Dites au revoir aux cartes de visite papier.<br> Créez des connexions durables avec des cartes de visite connectées,<br> reliées à un journal intelligent conçu pour les entrepreneurs qui voient grand.
+                </p>
+                
+                <div class="img">
+                    <img src="illustration2.png" width="80%">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="features">
+        <div class="container">
+            <div class="feature">
+                <div class="feature-content">
+                    <img src="ico.png">
+                    <h2>Tous Vos Contacts,<br>Un Seul Endroit</h2>
+                    <p>Fini les cartes de visite perdues ou les relances oubliées. Chaque nouveau contact enregistrée est une connexion inaltérable qui renforce votre réseau.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-content">
+                    <img src="ico.png">
+                    <h2>Accès Simple et<br>Rapide</h2>
+                    <p>Retrouvez n'importe quel contact en quelques secondes. Recherchez, filtrez et connectez-vous à la vitesse des affaires.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+                <div class="feature-content">
+                    <img src="ico.png">
+                    <h2>Une identité:<br>la vôtre</h2>
+                    <p>Une carte de visite connectée et un portfolio 100% personnalisés.<br> Votre identité, votre histoire, votre style.</p>
+                </div>
+            </div>
+
+            <div class="feature">
+              <div class="feature-content">
+                <img src="ico.png">
+                    <h2>Un Partage Simple, <br> Instantané</h2>
+                    <p>Votre carte connectée transmet vos informations immédiatement, pour des rencontres fluides et mémorables.</p>
+              </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="final-cta">
+        <div class="container">
+            
+            <div class="sib-form" style="text-align: center; background-color: transparent;">
+              <div id="sib-form-container" class="sib-form-container">
+                <div id="error-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path d="M256 40c118.621 0 216 96.075 216 216 0 119.291-96.61 216-216 216-119.244 0-216-96.562-216-216 0-119.203 96.602-216 216-216m0-32C119.043 8 8 119.083 8 256c0 136.997 111.043 248 248 248s248-111.003 248-248C504 119.083 392.957 8 256 8zm-11.49 120h22.979c6.823 0 12.274 5.682 11.99 12.5l-7 168c-.268 6.428-5.556 11.5-11.99 11.5h-8.979c-6.433 0-11.722-5.073-11.99-11.5l-7-168c-.283-6.818 5.167-12.5 11.99-12.5zM256 340c-15.464 0-28 12.536-28 28s12.536 28 28 28 28-12.536 28-28-12.536-28-28-28z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">
+                      Nous n&#039;avons pas pu confirmer votre inscription.
+                    </span>
+                  </div>
+                </div>
+                <div></div>
+                <div id="success-message" class="sib-form-message-panel" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#085229; background-color:#e7faf0; border-radius:3px; border-color:#13ce66;max-width:540px;">
+                  <div class="sib-form-message-panel__text sib-form-message-panel__text--center">
+                    <svg viewBox="0 0 512 512" class="sib-icon sib-notification__icon">
+                      <path d="M256 8C119.033 8 8 119.033 8 256s111.033 248 248 248 248-111.033 248-248S392.967 8 256 8zm0 464c-118.664 0-216-96.055-216-216 0-118.663 96.055-216 216-216 118.664 0 216 96.055 216 216 0 118.663-96.055 216-216 216zm141.63-274.961L217.15 376.071c-4.705 4.667-12.303 4.637-16.97-.068l-85.878-86.572c-4.667-4.705-4.637-12.303.068-16.97l8.52-8.451c4.705-4.667 12.303-4.637 16.97.068l68.976 69.533 163.441-162.13c4.705-4.667 12.303-4.637 16.97.068l8.451 8.52c4.668 4.705 4.637 12.303-.068 16.97z" />
+                    </svg>
+                    <span class="sib-form-message-panel__inner-text">
+                      Et c&#039;est parti! Votre adresse email a bien été enregistrée. Je vous tiendrai informé du projet.
+                    </span>
+                  </div>
+                </div>
+                <div></div>
+                <div id="sib-container" class="sib-container--large sib-container--vertical" style="text-align:center; background-color:rgba(97,0,95,0.23); max-width:540px; border-radius:23px; border-width:1px; border-color:#03366d; border-style:solid; direction:ltr">
+                  <form id="sib-form" method="POST" action="https://9a5a6fc0.sibforms.com/serve/MUIFAM7SAJE3bLJ7pIgnDKfqb301W84S-vAD1ub_biv3jDUBJ8RpH6nY8KJOvMyyT3GtW3gQvW2WoDHyUvgVkL_9rOlQ-241hIW0mshi2FXxafxhnShL4I6Ygsu6DqNZbHYKF4hl8h26vO9f9rLLEILHbj39Qx23VV7zYVeZetWS6QtriFUK1nKnangHAv0YUirNx3IvLqqflw3YOA==" data-type="subscription">
+                    <div style="padding: 8px 0;">
+                      <div class="sib-form-block" style="font-size:32px; text-align:left; font-weight:700; font-family:Futura, sans-serif; color:#ffffff; background-color:transparent; text-align:left">
+                        <p>Prêt à transformer votre réseau?</p>
+                      </div>
+                    </div>
+                    <div style="padding: 8px 0;">
+                      <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:&quot;Lucida Grande&quot;, sans-serif; color:#ecedee; background-color:transparent; text-align:left">
+                        <div class="sib-text-form-block">
+                          <p>En saisissant votre adresse mail, je vous emmène <br>
+                            avec moi dans l’évolution de ce projet.</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding: 8px 0;">
+                      <div class="sib-input sib-form-block">
+                        <div class="form__entry entry_block">
+                          <div class="form__label-row ">
+                            <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Futura, sans-serif; color:#fcfcfd;" for="EMAIL" data-required="*">Veuillez renseigner votre adresse email pour vous inscrire</label>
+                            <div class="entry__field">
+                              <input class="input " type="text" id="EMAIL" name="EMAIL" autocomplete="off" placeholder="EMAIL" data-required="true" required />
+                            </div>
+                          </div>
+                          <label class="entry__error entry__error--primary" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#661d1d; background-color:#ffeded; border-radius:3px; border-color:#ff4949;">
+                          </label>
+                          <label class="entry__specification" style="font-size:1px; text-align:left; font-family:Helvetica, sans-serif; color:#8390A4; text-align:left">
+                            Veuillez renseigner votre adresse email pour vous inscrire. Ex. : abc@xyz.com
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding: 8px 0;">
+                      <div class="sib-form__declaration" style="direction:ltr">
+                        <div class="declaration-block-icon">
+                          <svg class="icon__SVG" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                              <symbol id="svgIcon-sphere" viewBox="0 0 63 63">
+                                <path class="path1" d="M31.54 0l1.05 3.06 3.385-.01-2.735 1.897 1.05 3.042-2.748-1.886-2.738 1.886 1.044-3.05-2.745-1.897h3.393zm13.97 3.019L46.555 6.4l3.384.01-2.743 2.101 1.048 3.387-2.752-2.1-2.752 2.1 1.054-3.382-2.745-2.105h3.385zm9.998 10.056l1.039 3.382h3.38l-2.751 2.1 1.05 3.382-2.744-2.091-2.743 2.091 1.054-3.381-2.754-2.1h3.385zM58.58 27.1l1.04 3.372h3.379l-2.752 2.096 1.05 3.387-2.744-2.091-2.75 2.092 1.054-3.387-2.747-2.097h3.376zm-3.076 14.02l1.044 3.364h3.385l-2.743 2.09 1.05 3.392-2.744-2.097-2.743 2.097 1.052-3.377-2.752-2.117 3.385-.01zm-9.985 9.91l1.045 3.364h3.393l-2.752 2.09 1.05 3.393-2.745-2.097-2.743 2.097 1.05-3.383-2.751-2.1 3.384-.01zM31.45 55.01l1.044 3.043 3.393-.008-2.752 1.9L34.19 63l-2.744-1.895-2.748 1.891 1.054-3.05-2.743-1.9h3.384zm-13.934-3.98l1.036 3.364h3.402l-2.752 2.09 1.053 3.393-2.747-2.097-2.752 2.097 1.053-3.382-2.743-2.1 3.384-.01zm-9.981-9.91l1.045 3.364h3.398l-2.748 2.09 1.05 3.392-2.753-2.1-2.752 2.096 1.053-3.382-2.743-2.102 3.384-.009zM4.466 27.1l1.038 3.372H8.88l-2.752 2.097 1.053 3.387-2.743-2.09-2.748 2.09 1.053-3.387L0 30.472h3.385zm3.069-14.025l1.045 3.382h3.395L9.23 18.56l1.05 3.381-2.752-2.09-2.752 2.09 1.053-3.381-2.744-2.1h3.384zm9.99-10.056L18.57 6.4l3.393.01-2.743 2.1 1.05 3.373-2.754-2.092-2.751 2.092 1.053-3.382-2.744-2.1h3.384zm24.938 19.394l-10-4.22a2.48 2.48 0 00-1.921 0l-10 4.22A2.529 2.529 0 0019 24.75c0 10.47 5.964 17.705 11.537 20.057a2.48 2.48 0 001.921 0C36.921 42.924 44 36.421 44 24.75a2.532 2.532 0 00-1.537-2.336zm-2.46 6.023l-9.583 9.705a.83.83 0 01-1.177 0l-5.416-5.485a.855.855 0 010-1.192l1.177-1.192a.83.83 0 011.177 0l3.65 3.697 7.819-7.916a.83.83 0 011.177 0l1.177 1.191a.843.843 0 010 1.192z" fill="#0092FF"></path>
+                              </symbol>
+                            </defs>
+                          </svg>
+                          <svg class="svgIcon-sphere" style="width:63px; height:63px;">
+                            <use xlink:href="#svgIcon-sphere"></use>
+                          </svg>
+                        </div>
+                        <div style="font-size:14px; text-align:left; font-family:Helvetica, sans-serif; color:#687484; background-color:transparent;">
+                          <p>Nous utilisons Brevo en tant que plateforme marketing. En soumettant ce formulaire, vous acceptez que les données personnelles que vous avez fournies soient transférées à Brevo pour être traitées conformément <a href="https://www.brevo.com/fr/legal/privacypolicy/" target="_blank">à la politique de confidentialité de Brevo.</a></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div style="padding: 8px 0;">
+                      <div class="sib-form-block" style="text-align: left">
+                        <button class="sib-form-block__button sib-form-block__button-with-loader" style="font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#FFFFFF; background-color:#891069; border-radius:3px; border-width:0px;" form="sib-form" type="submit">
+                          <svg class="icon clickable__icon progress-indicator__icon sib-hide-loader-icon" viewBox="0 0 512 512" style="">
+                            <path d="M460.116 373.846l-20.823-12.022c-5.541-3.199-7.54-10.159-4.663-15.874 30.137-59.886 28.343-131.652-5.386-189.946-33.641-58.394-94.896-95.833-161.827-99.676C261.028 55.961 256 50.751 256 44.352V20.309c0-6.904 5.808-12.337 12.703-11.982 83.556 4.306 160.163 50.864 202.11 123.677 42.063 72.696 44.079 162.316 6.031 236.832-3.14 6.148-10.75 8.461-16.728 5.01z" />
+                          </svg>
+                          S&#039;INSCRIRE
+                        </button>
+                      </div>
+                    </div>
+                    <input type="text" name="email_address_check" value="" class="input--hidden">
+                    <input type="hidden" name="locale" value="fr">
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="footer-link">
+                <p>Besoin de me contacter?</p>
+                <a href="https://jardel-loris-pixel.github.io/">Accédez à mes infos</a>
+            </div>
+        </div>
+    </section>
+
+    <div class="toast" id="toast">Merci! Votre email a été enregistré.</div>
+
+    <script>
+        function showToast() {
+            const toast = document.getElementById('toast');
+            toast.classList.add('show');
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // Gestion du formulaire du haut (simulé pour l'instant)
+        document.getElementById('emailForm1').addEventListener('submit', (e) => {
+            e.preventDefault();
+            showToast();
+            e.target.reset();
+        });
+        
+        // La gestion du formulaire du bas (Brevo) est gérée par le script ci-dessous
+        
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
+    <script>
+      window.REQUIRED_CODE_ERROR_MESSAGE = 'Veuillez choisir un code pays';
+      window.LOCALE = 'fr';
+      window.EMAIL_INVALID_MESSAGE = window.SMS_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      window.REQUIRED_ERROR_MESSAGE = "Vous devez renseigner ce champ. ";
+      window.GENERIC_INVALID_MESSAGE = "Les informations que vous avez fournies ne sont pas valides. Veuillez vérifier le format du champ et réessayer.";
+      window.translation = {
+        common: {
+          selectedList: '{quantity} liste sélectionnée',
+          selectedLists: '{quantity} listes sélectionnées',
+          selectedOption: '{quantity} sélectionné',
+          selectedOptions: '{quantity} sélectionnés',
+        }
+      };
+      var AUTOHIDE = Boolean(0);
+    </script>
+    <script defer src="https://sibforms.com/forms/end-form/build/main.js"></script>
+    </body>
+</html>
