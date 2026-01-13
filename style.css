@@ -328,7 +328,8 @@ body {
   align-items: start;
   justify-content: center;
   background: var(--dark);
-  padding: 2rem 2rem 0rem;
+  padding: 0rem 0rem 0rem;
+  opacity: 0;
 }
 
 .about-content {
