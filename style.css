@@ -131,7 +131,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+  background: linear-gradient(180deg, #2c2241 0% , #ffffff 11%);
   padding: 4rem 1rem;
 }
 
@@ -281,21 +281,25 @@ body {
   pointer-events: all;
 }
 
-.info-card-back h3 {
-  font-size: 1.8rem;
+.info-card-back .situation {
+  font-size: 1.2rem;
   color: var(--primary);
   margin-bottom: 0.5rem;
+  color: #827d8c;
+  text-align: center;
+
 }
 
 .info-card-back .info-text {
   font-size: 1.2rem;
   text-align: center;
   word-break: break-word;
+  color: #ffffff;
  
 }
 
 .info-card-back a {
-  color: white;
+  color: #0f172a;
   background: var(--primary);
   text-decoration: none;
   font-weight: 600;
@@ -327,9 +331,9 @@ body {
   display: flex;
   align-items: start;
   justify-content: center;
-  background: var(--dark);
-  padding: 0rem 0rem 0rem;
-  opacity: 0;
+  background: linear-gradient(white 0%, #0f172a 5% 90%, white 95% 100%);
+  padding: 15rem 5rem 15rem 5rem;
+  opacity: 1;
 }
 
 .about-content {
@@ -362,8 +366,8 @@ body {
 
 .main-section {
   position: relative;
-  background: var(back);
-  padding: 3rem 0;
+  background: white;
+  padding: 0.5rem 0rem 5rem 0rem;
   min-height: 100vh;
 }
 
@@ -388,7 +392,7 @@ body {
 
 /* cartes avant d'apparaitre */
 .card {
-  background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(236, 72, 153, 0.1));
+  background: linear-gradient(135deg, rgb(42 45 152 / 15%), rgba(236, 72, 153, 0.2));
   backdrop-filter: blur(10px);
   border: 5px solid rgba(255, 255, 255, 0.1);
   border-radius: 1.5rem;
@@ -397,7 +401,7 @@ body {
   transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
   opacity: 0;
   transform: translateY(20px) rotateX(-15deg) scale(1);
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.3);
 }
 
 /*  arrivée dans partie main section */
@@ -443,6 +447,7 @@ body {
 
 .card ul {
   list-style: none;
+  color: #5b5763;
 }
 
 .card li {
@@ -468,9 +473,10 @@ body {
 }
 
 .card .date {
-  font-size: 0.9rem;
-  opacity: 0.7;
+  font-size: 0.85rem;
+  opacity: 1;
   font-style: italic;
+  color: #5b5763;
 }
 
 .nav .a {
@@ -507,7 +513,7 @@ body {
 
   .about-section {
     min-height: auto;
-    padding: 3rem 1.5rem 0rem;
+    padding: 3rem 1.5rem 3rem 1.5rem;
     position: relative; 
     z-index: 5;
   }
